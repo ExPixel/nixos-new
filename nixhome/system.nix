@@ -23,7 +23,14 @@
         pkgs.tldr
         pkgs.neovim
         pkgs.clang_19
+        pkgs.wget
+        pkgs.curl
     ];
+
+    ### nix-ld
+    # This allows VS Code remote to run.
+    programs.nix-ld.enable = true;
+
 
     ### Locale
     time.timeZone = "America/New_York";
