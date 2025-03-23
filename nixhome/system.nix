@@ -25,6 +25,8 @@
         pkgs.clang_19
         pkgs.wget
         pkgs.curl
+        pkgs.htop
+        pkgs.btop
     ];
 
     ### nix-ld
