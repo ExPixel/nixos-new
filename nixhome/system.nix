@@ -2,19 +2,6 @@
 {
     imports = [];
 
-    ### User Management
-    users.users.marc = {
-        isNormalUser = true;
-        home = "/home/marc";
-        description = "Marc";
-        extraGroups = [ "wheel" "networkmanager" ];
-    };
-
-    ### Networking
-    networking.hostName = "nixhome";
-    networking.networkmanager.enable = true;
-    services.tailscale.enable = true;
-
     ### System Packages
     environment.systemPackages = [
         pkgs.killall
@@ -28,6 +15,22 @@
         pkgs.htop
         pkgs.btop
     ];
+
+    ### User Management
+    users.users.marc = {
+        isNormalUser = true;
+        home = "/home/marc";
+        description = "Marc";
+        extraGroups = [ "wheel" "networkmanager" "docker" ];
+    };
+
+    ### Networking
+    networking.hostName = "nixhome";
+    networking.networkmanager.enable = true;
+    services.tailscale.enable = true;
+
+    ### Docker
+    virtualisation.docker.enable = true;
 
     ### nix-ld
     # This allows VS Code remote to run.
