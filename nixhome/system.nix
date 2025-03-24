@@ -14,6 +14,7 @@
         pkgs.curl
         pkgs.htop
         pkgs.btop
+        pkgs.jq
     ];
 
     ### User Management
