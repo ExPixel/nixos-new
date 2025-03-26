@@ -19,6 +19,9 @@
 
     ### Fish
     programs.fish.enable = true;
+    programs.fish.interactiveShellInit = ''
+        set fish_greeting # disable greeting
+    '';
     programs.fish.shellAliases = {
         "%" = "fg %1";
         "%1" = "fg %1";
