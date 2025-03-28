@@ -19,7 +19,6 @@
                         nix.settings.experimental-features = "nix-command flakes";
                         nix.settings.auto-optimise-store = true;
                         nixpkgs.config.allowUnfree = true;
-                        nixpkgs.config.permittedInsecurePackages = [ "xpdf-4.05" ];
 
                         wsl.defaultUser = "marc";
                         wsl.enable = true;
