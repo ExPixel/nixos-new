@@ -9,6 +9,7 @@
         pkgs.unzip
         pkgs.tldr
         pkgs.neovim
+        pkgs.rustup
         pkgs.clang_19
         pkgs.wget
         pkgs.curl
