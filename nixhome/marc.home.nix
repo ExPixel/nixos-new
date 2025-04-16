@@ -136,7 +136,8 @@
         -- search options
         vim.opt.hlsearch = false
         vim.opt.incsearch = true
-
+        vim.opt.ignorecase = true
+        vim.opt.smartcase = true
 
         -- misc options
         vim.opt.wrap = false
@@ -147,6 +148,7 @@
         vim.opt.colorcolumn = '120'
         vim.g.mapleader = ','
         vim.opt.termguicolors = true
+        vim.opt.noerrorbells = true
 
         -- key bindings
         vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
