@@ -148,7 +148,6 @@
         vim.opt.colorcolumn = '120'
         vim.g.mapleader = ','
         vim.opt.termguicolors = true
-        vim.opt.noerrorbells = true
 
         -- key bindings
         vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
