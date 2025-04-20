@@ -32,6 +32,10 @@
     programs.ssh.startAgent = true;
     services.tailscale.enable = true;
 
+    ### MySQL
+    services.mysql.enable = true;
+    services.mysql.package = pkgs.mariadb;
+
     ### Docker
     virtualisation.docker.enable = true;
 
