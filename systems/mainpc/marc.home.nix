@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
     imports = [
-        ../home/neovim.nix
-        ../home/tmux.nix
+        ../modules/home/neovim.nix
+        ../modules/home/tmux.nix
     ];
 
     ### XDG
