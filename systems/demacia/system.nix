@@ -16,12 +16,12 @@
         pkgs.htop
         pkgs.btop
         pkgs.jq
+        pkgs.clang_19
+        pkgs.glxinfo
 
-	pkgs.glxinfo
 
-
-	pkgs.gnomeExtensions.appindicator # systray icons
-	pkgs.gnome-settings-daemon # ensure gnome-settings-daemon udev rules are enabled
+        pkgs.gnomeExtensions.appindicator # systray icons
+        pkgs.gnome-settings-daemon # ensure gnome-settings-daemon udev rules are enabled
     ];
 
     ### User Management
