@@ -5,6 +5,9 @@
         ../../modules/home/tmux.nix
     ];
 
+    ### Firefox
+    programs.firefox.enable = true;
+
     ### XDG
     xdg.userDirs.enable = true;
     xdg.userDirs.createDirectories = true;
