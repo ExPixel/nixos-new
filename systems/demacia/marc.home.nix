@@ -3,6 +3,7 @@
     imports = [
         ../../modules/home/neovim.nix
         ../../modules/home/tmux.nix
+        ../../modules/home/alacritty.nix
     ];
 
     ### Firefox
@@ -35,6 +36,9 @@
         "%3" = "fg %3";
         "%4" = "fg %4";
     };
+
+    ### Alacritty
+    expixel.home.alacritty.enable = true;
 
     ### Bash
     programs.bash.enable = true;
