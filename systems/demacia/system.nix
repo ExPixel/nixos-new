@@ -106,6 +106,18 @@
         gnome-software
     ];
 
+    ### NVIDIA
+    hardware.nvidia = {
+        modesetting.enable = true;
+        nvidiaSettings = true;
+        open = true;
+        prime = {
+            intelBusId = "PCI:00:02.0";
+            nvidiaBusId = "PCI:01:00.0";
+        };
+        package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
+
     ### Locale & Time
     time.hardwareClockInLocalTime = true;
     time.timeZone = "America/New_York";
