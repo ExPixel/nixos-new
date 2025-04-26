@@ -22,6 +22,7 @@
 
         pkgs.gnomeExtensions.appindicator # systray icons
         pkgs.gnome-settings-daemon # ensure gnome-settings-daemon udev rules are enabled
+        pkgs.gnome-tweaks # mostly to remap capslock to escape
     ];
 
     ### User Management
