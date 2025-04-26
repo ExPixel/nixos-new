@@ -9,7 +9,7 @@
 
     outputs = { self, nixpkgs, nixos-wsl, home-manager, ... }: {
         nixosConfigurations = {
-            wsl = nixpkgs.lib.nixosSystem {
+            nixwsl = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 modules = [
                     ### System

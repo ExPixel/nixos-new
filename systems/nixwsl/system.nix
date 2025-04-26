@@ -27,7 +27,7 @@
     };
 
     ### Networking
-    networking.hostName = "nixhome";
+    networking.hostName = "nixwsl";
     networking.networkmanager.enable = true;
     programs.ssh.startAgent = true;
     services.tailscale.enable = true;
