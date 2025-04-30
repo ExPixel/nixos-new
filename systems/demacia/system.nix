@@ -18,6 +18,7 @@
         pkgs.jq
         pkgs.clang_19
         pkgs.glxinfo
+        pkgs.google-chrome
 
 
         pkgs.gnomeExtensions.appindicator # systray icons
