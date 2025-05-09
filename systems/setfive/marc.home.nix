@@ -62,6 +62,10 @@
     ### Neovim (nvim)
     expixel.home.neovim.enable = true;
 
+    ### VS Code
+    programs.vscode.enable = true;
+
+
     ### END
     home.stateVersion = "24.11";
 }
