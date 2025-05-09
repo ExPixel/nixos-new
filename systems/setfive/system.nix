@@ -18,6 +18,7 @@
         pkgs.jq
         pkgs.clang_19
         pkgs.glxinfo
+        pkgs.slack
 
         pkgs.gnomeExtensions.appindicator # systray icons
         pkgs.gnome-settings-daemon # ensure gnome-settings-daemon udev rules are enabled
