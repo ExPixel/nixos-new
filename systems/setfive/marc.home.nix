@@ -65,6 +65,15 @@
     ### VS Code
     programs.vscode.enable = true;
 
+    ### IdeaVim configuration (for PHPStorm and other JetBrains IDEs)
+    home.file.".ideavimrc".text = ''
+        set visualbell
+        set noerrorbells
+        set incsearch
+        set ignorecase
+        set smartcase
+    '';
+
 
     ### END
     home.stateVersion = "24.11";
