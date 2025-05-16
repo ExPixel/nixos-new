@@ -36,7 +36,6 @@
     ### Networking
     networking.hostName = "marc";
     networking.networkmanager.enable = true;
-    programs.ssh.startAgent = true;
     services.tailscale.enable = true;
     services.printing.enable = true;
     # Enable autodiscovery of network printers
@@ -45,6 +44,10 @@
         nssmdns4 = true;
         openFirewall = true;
     };
+
+    ### OpenSSH
+    services.openssh.enable = true;
+    programs.ssh.startAgent = true;
 
     ### Docker
     virtualisation.docker.enable = true;
