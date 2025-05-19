@@ -22,6 +22,7 @@
     programs.git.userEmail = "marc@setfive.com";
     programs.git.extraConfig = {
         init.defaultBranch = "main";
+        push.autoSetupRemote = true;
     };
 
     ### Fish
