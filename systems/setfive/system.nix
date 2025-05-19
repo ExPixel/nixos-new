@@ -124,4 +124,9 @@
         LC_TELEPHONE = "en_US.UTF-8";
         LC_TIME = "en_US.UTF-8";
     };
+
+    ### MySQL
+    services.mysql.enable = true;
+    services.mysql.package = pkgs.mariadb;
+
 }
