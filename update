@@ -1,0 +1,20 @@
+#/bin/env sh
+
+SCRIPTPATH=$(readlink -f "$0")
+SCRIPTDIR=$(dirname "$SCRIPTPATH")
+
+if [ ! -f ".system" ]; then
+    echo ".system file does not exist, please create one"
+    exit 1
+fi
+
+PROFILE=$(cat .system)
+PROFILEDIR="$SCRIPTDIR/systems/$PROFILE"
+
+if [ ! -d "$PROFILEDIR" ]; then
+    echo "system '$PROFILE' not found at '$PROFILEDIR'"
+    exit 1
+fi
+
+echo "Building '${PROFILE}'"
+cd "$PROFILEDIR" && nix flake update
