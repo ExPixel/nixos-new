@@ -16,6 +16,7 @@
         pkgs.htop
         pkgs.btop
         pkgs.jq
+        pkgs.gh
     ];
 
     ### User Management
