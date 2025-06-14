@@ -17,6 +17,7 @@
         pkgs.btop
         pkgs.jq
         pkgs.gh
+        pkgs.linuxKernel.packages.linux_6_6.usbip
     ];
 
     ### User Management
