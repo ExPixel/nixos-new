@@ -22,6 +22,7 @@
 
                         wsl.defaultUser = "marc";
                         wsl.enable = true;
+                        wsl.usbip.enable = true;
                     }
                     ./system.nix
 
