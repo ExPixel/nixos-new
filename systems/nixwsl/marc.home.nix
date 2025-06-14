@@ -31,6 +31,7 @@
         "%2" = "fg %2";
         "%3" = "fg %3";
         "%4" = "fg %4";
+        "winip" = "ip route show | grep -i default | awk '{ print $3}'";
     };
 
     ### Bash
