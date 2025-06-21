@@ -88,7 +88,7 @@
         code = ''
         set -l code_cmd (command -a code)[1]
         $code_cmd $argv
-        ''
+        '';
     };
 
     ### Bash
