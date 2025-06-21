@@ -17,15 +17,22 @@
         pkgs.btop
         pkgs.jq
         pkgs.gh
-        pkgs.u-root-cmds
+        pkgs.kmod
+        pkgs.usbutils
+        pkgs.gnumake
+        pkgs.pkg-config
+        pkgs.openssl
     ];
+
+    ### Environment Variables
+    environment.variables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
 
     ### User Management
     users.users.marc = {
         isNormalUser = true;
         home = "/home/marc";
         description = "Marc";
-        extraGroups = [ "wheel" "networkmanager" "docker" ];
+        extraGroups = [ "wheel" "networkmanager" "docker" "dialout" ];
     };
 
     ### Networking
