@@ -51,6 +51,7 @@
     ### OpenSSH
     services.openssh.enable = true;
     programs.ssh.startAgent = true;
+    services.gnome.gcr-ssh-agent.enable = false;
 
     ### Docker
     virtualisation.docker.enable = true;
