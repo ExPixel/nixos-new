@@ -18,7 +18,7 @@
                         nix.settings.auto-optimise-store = true;
                         nixpkgs.config.allowUnfree = true;
                         nixpkgs.config.permittedInsecurePackages = [
-                            "beekeeper-studio-5.2.9"
+                            "beekeeper-studio-5.2.12"
                         ];
                     })
                     ./system.nix
