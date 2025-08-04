@@ -22,6 +22,7 @@
         pkgs.jetbrains.phpstorm
         pkgs.dbeaver-bin
         pkgs.beekeeper-studio
+        pkgs.bruno
 
         pkgs.gnomeExtensions.appindicator # systray icons
         pkgs.gnome-settings-daemon # ensure gnome-settings-daemon udev rules are enabled
