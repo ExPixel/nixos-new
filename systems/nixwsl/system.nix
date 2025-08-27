@@ -20,12 +20,12 @@
         pkgs.kmod
         pkgs.usbutils
         pkgs.gnumake
-        pkgs.pkg-config
-        pkgs.openssl
+        # pkgs.pkg-config
+        # pkgs.openssl
     ];
 
     ### Environment Variables
-    environment.variables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+    ### environment.variables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
 
     ### User Management
     users.users.marc = {
