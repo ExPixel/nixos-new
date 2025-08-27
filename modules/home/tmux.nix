@@ -34,6 +34,7 @@ in {
 
             ### keybindings
             bind-key r    source-file ~/.config/tmux/tmux.conf \; display "Reloaded tmux configuration"
+            bind-key k    send-keys -R \; clear-history
             bind-key \`   switch-client -t'{marked}'
             bind-key "|"  split-window -h -c "#{pane_current_path}"
             bind-key "\\"   split-window -fh -c "#{pane_current_path}"
