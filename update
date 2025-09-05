@@ -2,6 +2,15 @@
 
 SCRIPTPATH=$(readlink -f "$0")
 SCRIPTDIR=$(dirname "$SCRIPTPATH")
+SHOULD_COMMIT=0
+
+for arg in "$@"; do
+    case "$arg" in
+        -c)
+            SHOULD_COMMIT=1
+            ;;
+    esac
+done
 
 if [ ! -f ".system" ]; then
     echo ".system file does not exist, please create one"
@@ -18,3 +27,8 @@ fi
 
 echo "Building '${PROFILE}'"
 cd "$PROFILEDIR" && nix flake update
+
+if [ "$SHOULD_COMMIT" -eq 1 ]; then
+    echo "comitting flake.lock"
+    git commit flake.lock -m "${PROFILE}/meta: nix flake update"
+fi
