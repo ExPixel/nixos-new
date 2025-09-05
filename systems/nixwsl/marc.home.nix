@@ -3,6 +3,7 @@
     imports = [
         ../../modules/home/neovim.nix
         ../../modules/home/tmux.nix
+        ../../modules/home/bat.nix
     ];
 
     ### XDG
@@ -113,6 +114,9 @@
 
     ### Neovim (nvim)
     expixel.home.neovim.enable = true;
+
+    ### Bat
+    expixel.home.bat.enable = true;
 
     ### IdeaVim configuration (for PHPStorm and other JetBrains IDEs)
     home.file.".ideavimrc".text = ''
