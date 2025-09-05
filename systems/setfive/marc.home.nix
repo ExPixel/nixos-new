@@ -66,6 +66,9 @@
     ### VS Code
     programs.vscode.enable = true;
 
+    ### Bat
+    expixel.home.bat.enable = true;
+
     ### IdeaVim configuration (for PHPStorm and other JetBrains IDEs)
     home.file.".ideavimrc".text = ''
         set visualbell
