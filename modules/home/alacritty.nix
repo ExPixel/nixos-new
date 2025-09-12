@@ -4,10 +4,15 @@ let
 in {
     options.expixel.home.alacritty = {
         enable = lib.mkEnableOption "alacritty";
+        theme  = lib.mkOption {
+            type = lib.types.str;
+            description = "Alacritty theme.";
+            default = "gruvbox_dark";
+        };
     };
 
     config = lib.mkIf cfg.enable {
         programs.alacritty.enable = true;
-        programs.alacritty.theme = "gruvbox_dark";
+        programs.alacritty.theme = cfg.theme;
     };
 }

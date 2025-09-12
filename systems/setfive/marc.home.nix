@@ -40,6 +40,7 @@
 
     ### Alacritty
     expixel.home.alacritty.enable = true;
+    expixel.home.alacritty.theme = "alabaster";
 
     ### Bash
     programs.bash.enable = true;
@@ -59,6 +60,7 @@
 
     ### tmux
     expixel.home.tmux.enable = true;
+    expixel.home.tmux.theme = "light";
 
     ### Neovim (nvim)
     expixel.home.neovim.enable = true;

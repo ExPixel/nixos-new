@@ -4,6 +4,11 @@ let
 in {
     options.expixel.home.tmux = {
         enable = lib.mkEnableOption "Tmux";
+        theme = lib.mkOption {
+            type = lib.types.str;
+            default = "light";
+            description = "Tmux theme";
+        };
     };
 
     config = lib.mkIf cfg.enable {
@@ -13,7 +18,7 @@ in {
             {
                 plugin = pkgs.tmuxPlugins.gruvbox;
                 extraConfig = ''
-                    set -g @tmux-gruvbox 'dark'
+                    set -g @tmux-gruvbox '${if cfg.theme == "light" then "light" else "dark"}'
                 '';
             }
             pkgs.tmuxPlugins.sensible
