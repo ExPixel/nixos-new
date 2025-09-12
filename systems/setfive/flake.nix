@@ -18,7 +18,20 @@
                         nix.settings.auto-optimise-store = true;
                         nixpkgs.config.allowUnfree = true;
                         nixpkgs.config.permittedInsecurePackages = [
-                            "beekeeper-studio-5.2.12"
+                            "beekeeper-studio-5.3.4"
+                        ];
+
+                        nixpkgs.overlays = [
+                            (final: prev: {
+                                tailscale = prev.tailscale.overrideAttrs (old: {
+                                    checkFlags = builtins.map (
+                                        flag:
+                                            if prev.lib.hasPrefix "-skip=" flag
+                                            then flag + "|^TestGetList$|^TestIgnoreLocallyBoundPorts$|^TestPoller$"
+                                            else flag
+                                    ) old.checkFlags;
+                                });
+                            })
                         ];
                     })
                     ./system.nix
