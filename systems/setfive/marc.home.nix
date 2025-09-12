@@ -4,6 +4,7 @@
         ../../modules/home/neovim.nix
         ../../modules/home/tmux.nix
         ../../modules/home/alacritty.nix
+        ../../modules/home/bat.nix
     ];
 
     ### Firefox
