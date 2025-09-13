@@ -47,6 +47,9 @@
 
     ### Docker
     virtualisation.docker.enable = true;
+    virtualisation.docker.daemon.settings = {
+        insecure-registries = [ "itsmemarc-0:5000" ];
+    };
 
     ### nix-ld
     # This allows VS Code remote to run.
