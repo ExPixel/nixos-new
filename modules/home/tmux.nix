@@ -6,7 +6,7 @@ in {
         enable = lib.mkEnableOption "Tmux";
         theme = lib.mkOption {
             type = lib.types.str;
-            default = "light";
+            default = "dark";
             description = "Tmux theme";
         };
     };
