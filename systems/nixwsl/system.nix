@@ -20,8 +20,7 @@
         pkgs.kmod
         pkgs.usbutils
         pkgs.gnumake
-        # pkgs.pkg-config
-        # pkgs.openssl
+        pkgs.ripgrep
     ];
 
     ### Environment Variables
