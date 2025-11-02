@@ -17,4 +17,4 @@ if [ ! -d "$PROFILEDIR" ]; then
 fi
 
 echo "Building '${PROFILE}'"
-cd "$PROFILEDIR" && sudo nixos-rebuild switch --flake ".#$PROFILE"
+cd "$PROFILEDIR" && sudo nixos-rebuild switch --show-trace --flake ".#$PROFILE"
