@@ -18,10 +18,10 @@
 
     ### Git / Start
     programs.git.enable = true;
-    programs.git.userName = "Marc C.";
-    programs.git.userEmail = "adolphc@outlook.com";
-    programs.git.extraConfig = {
+    programs.git.settings = {
         init.defaultBranch = "main";
+        user.name = "Marc C.";
+        user.email = "adolphc@outlook.com";
     };
 
     ### Fish
