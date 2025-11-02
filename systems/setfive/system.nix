@@ -17,7 +17,6 @@
         pkgs.btop
         pkgs.jq
         pkgs.clang_19
-        pkgs.glxinfo
         pkgs.slack
         pkgs.jetbrains.phpstorm
         pkgs.dbeaver-bin
@@ -67,7 +66,7 @@
     boot.loader.efi.canTouchEfiVariables = true;
 
     ### Fonts
-    fonts.packages = with pkgs; [ iosevka noto-fonts roboto roboto-mono roboto-serif ubuntu_font_family ];
+    fonts.packages = with pkgs; [ iosevka noto-fonts roboto roboto-mono roboto-serif ubuntu-classic ];
     fonts.enableDefaultPackages = true;
 
     ### OpenGL
