@@ -19,11 +19,11 @@
 
     ### Git / Start
     programs.git.enable = true;
-    programs.git.userName = "Marc C.";
-    programs.git.userEmail = "marc@setfive.com";
-    programs.git.extraConfig = {
-        init.defaultBranch = "main";
+    programs.git.settings = {
         push.autoSetupRemote = true;
+        init.defaultBranch = "main";
+        user.name = "Marc C.";
+        user.email = "marc@setfive.com";
     };
 
     ### Fish
