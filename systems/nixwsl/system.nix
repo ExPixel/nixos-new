@@ -38,6 +38,7 @@
     networking.hostName = "nixwsl";
     networking.networkmanager.enable = true;
     programs.ssh.startAgent = true;
+    services.tailscale.enable = true;
 
     ### MySQL
     services.mysql.enable = true;
