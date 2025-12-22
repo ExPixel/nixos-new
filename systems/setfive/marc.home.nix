@@ -81,6 +81,11 @@
         set smartcase
     '';
 
+    ### Extra Packages
+    home.packages = [
+        pkgs.chromium
+    ];
+
 
     ### END
     home.stateVersion = "24.11";
