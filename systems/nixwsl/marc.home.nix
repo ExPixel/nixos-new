@@ -17,7 +17,7 @@
         # directories
         desktop = null;
         documents = null;
-        download = "${config.home.homeDirectory}/download";
+        download = "${config.home.homeDirectory}/downloads";
         music = null;
         pictures = null;
         publicShare = null;
