@@ -39,37 +39,29 @@ in {
             vim.g.loaded_netrwPlugin    = 1
             vim.opt.isfname:append("@-@")
         '';
-        programs.neovim.plugins = [
+
+        programs.neovim.plugins = let
+            nvim-treesitter-main = pkgs.vimUtils.buildVimPlugin {
+                pname = "nvim-treesitter-main";
+                version = "6e42d823ce0a5a76180c473c119c7677738a09d1";
+                src = pkgs.fetchFromGitHub {
+                    owner = "nvim-treesitter";
+                    repo = "nvim-treesitter";
+                    rev = "6e42d823ce0a5a76180c473c119c7677738a09d1";
+                    sha256 = "sha256-wC0ZngirfJYLTJIydTwMwET1ucy6JEy28BoDmGPDN+k=";
+                };
+                nvimSkipModules = ["nvim-treesitter._meta.parsers"];
+            };
+        in [
         pkgs.vimPlugins.lualine-nvim
         {
-            plugin = pkgs.vimPlugins.nvim-treesitter;
+            plugin = nvim-treesitter-main;
             type = "lua";
             config = ''
-                require("nvim-treesitter.configs").setup({
-                    -- A list of parser names, or "all"
-                    ensure_installed = { "javascript", "typescript", "c", "lua", "rust" },
-            
-                    -- Install parsers synchronously (only applied to `ensure_installed`)
-                    sync_install = false,
-            
-                    -- Automatically install missing parsers when entering buffer
-                    -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-                    auto_install = false,
-
-                    parser_install_dir = vim.fn.stdpath('data') .. '/nvim-treesitter',
-            
-                    highlight = {
-                        -- `false` will disable the whole extension
-                        enable = true,
-                
-                
-                        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-                        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-                        -- Using this option may slow down your editor, and you may see some duplicate highlights.
-                        -- Instead of true it can also be a list of languages
-                        additional_vim_regex_highlighting = false,
-                    },
-                })
+                require'nvim-treesitter'.setup {
+                    install_dir = vim.fn.stdpath('data') .. '/nvim-treesitter',
+                }
+                require'nvim-treesitter'.install { 'rust', 'javascript', 'typescript', 'c' }
             '';
         }
         {
