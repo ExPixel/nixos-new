@@ -6,6 +6,13 @@
         ../../modules/home/bat.nix
     ];
 
+    home.packages = [
+        pkgs.pnpm
+        pkgs.nodejs_24
+        pkgs.tree-sitter
+        pkgs.opencode
+    ];
+
     ### XDG
     xdg.userDirs = {
         enable = true;
