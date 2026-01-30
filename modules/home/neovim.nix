@@ -11,7 +11,7 @@ in {
         programs.neovim.defaultEditor = true;
         programs.neovim.viAlias = true;
         programs.neovim.vimAlias = true;
-        programs.neovim.extraLuaConfig = ''
+        programs.neovim.initLua = ''
             vim.opt.number              = true  -- line numbers
             vim.opt.relativenumber      = true
             vim.opt.tabstop             = 4     -- indentation options
