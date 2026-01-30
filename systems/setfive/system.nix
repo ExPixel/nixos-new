@@ -23,6 +23,7 @@
         pkgs.beekeeper-studio
         pkgs.bruno
         pkgs.ripgrep
+        pkgs.libreoffice-still
 
         pkgs.gnomeExtensions.appindicator # systray icons
         pkgs.gnome-settings-daemon # ensure gnome-settings-daemon udev rules are enabled
