@@ -84,6 +84,7 @@
     ### Extra Packages
     home.packages = [
         pkgs.chromium
+        pkgs.opencode
     ];
 
 
